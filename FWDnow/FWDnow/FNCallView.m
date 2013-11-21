@@ -21,7 +21,13 @@
 }
 
 - (IBAction)btnCallPressed:(UIButton *)sender {
-    
+    [self endEditing:YES];
+    [self.delegate callViewDidCall:self];
+}
+
+- (IBAction)btnSendPressed:(UIButton *)sender {
+    [self endEditing:YES];
+    [self.delegate callViewDidSendPostCard:self];
 }
 
 - (void)setupForItem:(FNItem *)item {

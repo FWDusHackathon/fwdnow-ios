@@ -29,7 +29,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="btnFWDNowPressed:" destination="xaA-kL-DhJ" eventType="touchUpInside" id="nmc-ud-QiR"/>
+                        <action selector="btnCallPressed:" destination="xaA-kL-DhJ" eventType="touchUpInside" id="olN-7p-0bk"/>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heatmap.png" id="wg5-8o-Qhk">
@@ -115,7 +115,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="btnFWDNowPressed:" destination="xaA-kL-DhJ" eventType="touchUpInside" id="IV2-tG-lmy"/>
+                        <action selector="btnSendPressed:" destination="xaA-kL-DhJ" eventType="touchUpInside" id="Abd-sF-2UM"/>
                     </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mjy-Zw-u3p">

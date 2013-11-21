@@ -77,6 +77,8 @@
     _shouldPostOnFB = self.btnFB.selected;
     _shouldPostOnTwitter = self.btnTwitter.selected;
     
+    [self endEditing:YES];
+    
     BOOL shouldPost = (_shouldPostOnFB || _shouldPostOnTwitter);
     if (shouldPost) {
         if (_shouldPostOnFB) {

@@ -24,7 +24,7 @@ typedef NS_ENUM(NSInteger, FNItemCellMode) {
 @class FNItem;
 @protocol FNItemCellDelegate;
 
-@interface FNItemCell : UICollectionViewCell <FNPostViewDelegate> {
+@interface FNItemCell : UICollectionViewCell <FNPostViewDelegate, FNCallViewDelegate> {
     FNItem *_item;
     FNPostView *_postView;
     FNCallView *_callView;

@@ -49,6 +49,7 @@
 
 - (void)setCellMode:(FNItemCellMode)cellMode animated:(BOOL)animated {
 }
+
 #pragma mark - FNPostViewDelegate
 
 - (UIViewController *)viewControllerForPostViewShareViews:(FNPostView *)postView {
@@ -58,6 +59,16 @@
 - (void)postViewDidFinishPosting:(FNPostView *)postView {
     //We want to show the success post view
     [self setCellMode:FNItemCellModeCall animated:YES];
+}
+
+#pragma mark - FNCallViewDelegate
+
+- (void)callViewDidCall:(FNCallView *)callView {
+    [self setCellMode:FNItemCellModeNormal animated:YES];
+}
+
+- (void)callViewDidSendPostCard:(FNCallView *)callView {
+    [self setCellMode:FNItemCellModeNormal animated:YES];
 }
 
 @end

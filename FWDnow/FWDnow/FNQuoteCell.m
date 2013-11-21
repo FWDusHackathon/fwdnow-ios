@@ -174,6 +174,7 @@
             if ([elements count] > 0) {
                 _callView = elements[0];
             }
+            _callView.delegate = self;
         }
         
         [_callView setupForItem:_item];
