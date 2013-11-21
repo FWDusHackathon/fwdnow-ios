@@ -47,4 +47,10 @@
 - (void)setCellState:(FNItemCellState)cellState animate:(BOOL)animated {
 }
 
+#pragma mark - FNPostViewDelegate
+
+- (UIViewController *)viewControllerForPostViewShareViews:(FNPostView *)postView {
+    return [self.delegate viewControllerForItemCell:self];
+}
+
 @end

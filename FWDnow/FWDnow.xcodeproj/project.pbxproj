@@ -15,6 +15,9 @@
 		C82F08BD183E51090055948C /* btnCongressman@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08BA183E51090055948C /* btnCongressman@2x.png */; };
 		C82F08BE183E51090055948C /* btnFB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08BB183E51090055948C /* btnFB@2x.png */; };
 		C82F08BF183E51090055948C /* btnTwitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08BC183E51090055948C /* btnTwitter@2x.png */; };
+		C82F08C3183E553C0055948C /* btnCongressmanSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08C0183E553C0055948C /* btnCongressmanSelected@2x.png */; };
+		C82F08C4183E553C0055948C /* btnFBSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08C1183E553C0055948C /* btnFBSelected@2x.png */; };
+		C82F08C5183E553C0055948C /* btnTwitterSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08C2183E553C0055948C /* btnTwitterSelected@2x.png */; };
 		C8B680A4183E164F007CDF88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A3183E164F007CDF88 /* Foundation.framework */; };
 		C8B680A6183E164F007CDF88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A5183E164F007CDF88 /* CoreGraphics.framework */; };
 		C8B680A8183E164F007CDF88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A7183E164F007CDF88 /* UIKit.framework */; };
@@ -72,6 +75,9 @@
 		C82F08BA183E51090055948C /* btnCongressman@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnCongressman@2x.png"; sourceTree = "<group>"; };
 		C82F08BB183E51090055948C /* btnFB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnFB@2x.png"; sourceTree = "<group>"; };
 		C82F08BC183E51090055948C /* btnTwitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnTwitter@2x.png"; sourceTree = "<group>"; };
+		C82F08C0183E553C0055948C /* btnCongressmanSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnCongressmanSelected@2x.png"; sourceTree = "<group>"; };
+		C82F08C1183E553C0055948C /* btnFBSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnFBSelected@2x.png"; sourceTree = "<group>"; };
+		C82F08C2183E553C0055948C /* btnTwitterSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnTwitterSelected@2x.png"; sourceTree = "<group>"; };
 		C8B680A0183E164F007CDF88 /* FWDnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWDnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B680A3183E164F007CDF88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8B680A5183E164F007CDF88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -278,6 +284,9 @@
 				C82F08BA183E51090055948C /* btnCongressman@2x.png */,
 				C82F08BB183E51090055948C /* btnFB@2x.png */,
 				C82F08BC183E51090055948C /* btnTwitter@2x.png */,
+				C82F08C0183E553C0055948C /* btnCongressmanSelected@2x.png */,
+				C82F08C1183E553C0055948C /* btnFBSelected@2x.png */,
+				C82F08C2183E553C0055948C /* btnTwitterSelected@2x.png */,
 				C82F08B8183E50E30055948C /* iconFWDLight@2x.png */,
 				C8B68112183E44CC007CDF88 /* iconFWD@2x.png */,
 				C8B68106183E2491007CDF88 /* FWDnow@2x.png */,
@@ -391,11 +400,14 @@
 				C8B68100183E1BD0007CDF88 /* Shakira@2x.jpg in Resources */,
 				C8B680BF183E164F007CDF88 /* Images.xcassets in Resources */,
 				C82F08BF183E51090055948C /* btnTwitter@2x.png in Resources */,
+				C82F08C3183E553C0055948C /* btnCongressmanSelected@2x.png in Resources */,
+				C82F08C5183E553C0055948C /* btnTwitterSelected@2x.png in Resources */,
 				C82F08B9183E50E30055948C /* iconFWDLight@2x.png in Resources */,
 				C82F08BD183E51090055948C /* btnCongressman@2x.png in Resources */,
 				C8B680EF183E1ABF007CDF88 /* FNQuoteCell.xib in Resources */,
 				C8B68113183E44CC007CDF88 /* iconFWD@2x.png in Resources */,
 				C8B68107183E2491007CDF88 /* FWDnow@2x.png in Resources */,
+				C82F08C4183E553C0055948C /* btnFBSelected@2x.png in Resources */,
 				C8B68101183E1BD0007CDF88 /* Taboo@2x.jpg in Resources */,
 				C8B680FA183E1BD0007CDF88 /* Julianne@2x.jpg in Resources */,
 				C8B68105183E245B007CDF88 /* FNHeader.xib in Resources */,

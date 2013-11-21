@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FNQuoteCell.h"
 
-@interface FNViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface FNViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, FNItemCellDelegate>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 

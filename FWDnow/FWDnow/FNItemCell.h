@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FNPostView.h"
 
 typedef NS_ENUM(NSInteger, FNItemCellState) {
     FNItemCellStateNormal = 0,
@@ -20,9 +21,11 @@ typedef NS_ENUM(NSInteger, FNItemCellMode) {
 };
 
 @class FNItem;
+@protocol FNItemCellDelegate;
 
-@interface FNItemCell : UICollectionViewCell {
+@interface FNItemCell : UICollectionViewCell <FNPostViewDelegate> {
     FNItem *_item;
+    FNPostView *_postView;
 }
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
@@ -33,6 +36,7 @@ typedef NS_ENUM(NSInteger, FNItemCellMode) {
 @property (strong, nonatomic) IBOutlet UIView *gradientView;
 @property (nonatomic) FNItemCellState cellState;
 @property (nonatomic) FNItemCellMode cellMode;
+@property (weak, nonatomic) id<FNItemCellDelegate> delegate;
 
 + (CGSize)sizeForState:(FNItemCellState)state;
 
@@ -41,5 +45,11 @@ typedef NS_ENUM(NSInteger, FNItemCellMode) {
 - (void)setupForItem:(FNItem *)item;
 - (void)setCellState:(FNItemCellState)cellState animate:(BOOL)animated;
 - (void)setCellMode:(FNItemCellMode)cellMode animated:(BOOL)animated;
+
+@end
+
+@protocol FNItemCellDelegate <NSObject>
+
+- (UIViewController *)viewControllerForItemCell:(FNItemCell *)cell;
 
 @end

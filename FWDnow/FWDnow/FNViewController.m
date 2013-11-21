@@ -8,7 +8,6 @@
 
 #import "FNViewController.h"
 #import "FNQuote.h"
-#import "FNQuoteCell.h"
 
 @interface FNViewController ()
 
@@ -105,6 +104,7 @@
     id resource = [_items objectAtIndex:indexPath.row];
     if ([resource isKindOfClass:[FNQuote class]]) {
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FNQuoteCell" forIndexPath:indexPath];
+        cell.delegate = self;
         FNQuote *quote = (FNQuote *)resource;
         [(FNQuoteCell*)cell setupForItem:quote];
     }
@@ -193,6 +193,12 @@
                              completion:^(BOOL finished){
                                  
                              }];
+}
+
+#pragma mark - FNItemCellDelegate
+
+- (UIViewController *)viewControllerForItemCell:(FNItemCell *)cell {
+    return self;
 }
 
 @end

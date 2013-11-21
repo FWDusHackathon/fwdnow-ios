@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="1" customClass="FNPostView">
             <rect key="frame" x="0.0" y="0.0" width="240" height="200"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="p7D-V4-Z29">
                     <rect key="frame" x="20" y="140" width="200" height="40"/>
@@ -27,29 +27,44 @@
                             <integer key="value" value="3"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnFWDNowPressed:" destination="1" eventType="touchUpInside" id="h2G-pz-6rM"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xlA-au-49E">
+                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xlA-au-49E" userLabel="Button - fb">
                     <rect key="frame" x="63" y="95" width="29" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <state key="normal" image="btnFB.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="selected" image="btnFBSelected.png"/>
+                    <connections>
+                        <action selector="btnFBPressed:" destination="1" eventType="touchUpInside" id="DXO-Zl-LDj"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X1j-cN-fhm">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X1j-cN-fhm" userLabel="Button - twitter">
                     <rect key="frame" x="106" y="95" width="29" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <state key="normal" image="btnTwitter.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="selected" image="btnTwitterSelected.png"/>
+                    <connections>
+                        <action selector="btnTwitterPressed:" destination="1" eventType="touchUpInside" id="ADU-2r-Bol"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YDk-Qz-ihS">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YDk-Qz-ihS" userLabel="Button - congressman">
                     <rect key="frame" x="149" y="95" width="29" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <state key="normal" image="btnCongressman.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="selected" image="btnCongressmanSelected.png"/>
+                    <connections>
+                        <action selector="btnCongressmanPressed:" destination="1" eventType="touchUpInside" id="neg-PX-inj"/>
+                    </connections>
                 </button>
-                <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="MRi-gC-9f6">
+                <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="center" id="MRi-gC-9f6">
                     <rect key="frame" x="20" y="6" width="200" height="76"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -67,14 +82,20 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="btnCongressman" destination="YDk-Qz-ihS" id="V3m-73-5L7"/>
+                <outlet property="btnFB" destination="xlA-au-49E" id="DB0-WR-a42"/>
+                <outlet property="btnTwitter" destination="X1j-cN-fhm" id="Lyw-43-er6"/>
                 <outlet property="textView" destination="MRi-gC-9f6" id="fkw-lG-xoQ"/>
             </connections>
         </view>
     </objects>
     <resources>
         <image name="btnCongressman.png" width="29" height="29"/>
+        <image name="btnCongressmanSelected.png" width="29" height="29"/>
         <image name="btnFB.png" width="29" height="29"/>
+        <image name="btnFBSelected.png" width="29" height="29"/>
         <image name="btnTwitter.png" width="29" height="29"/>
+        <image name="btnTwitterSelected.png" width="29" height="29"/>
         <image name="iconFWDLight.png" width="24" height="24"/>
     </resources>
 </document>

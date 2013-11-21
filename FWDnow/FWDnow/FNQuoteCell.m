@@ -16,7 +16,6 @@
 
 @implementation FNQuoteCell {
     BOOL _initialized;
-    FNPostView *_postView;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -100,6 +99,7 @@
             if ([elements count] > 0) {
                 _postView = elements[0];
             }
+            _postView.delegate = self;
         }
         
         [_postView setupForItem:_item];
