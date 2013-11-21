@@ -90,7 +90,7 @@
 - (void)postOnFacebook {
     
     NSString *message = self.textView.text;
-    NSString *link = @"www.fwdnow.com";
+    NSString *link = @"www.fwdnow.us";
     if (_name != nil) {
         link = [link stringByAppendingPathComponent:_name];
     }
@@ -117,7 +117,7 @@
                                       } else {
                                           _shouldPostOnFB = NO;
                                           //Success, let's see if we need to show twitter
-                                          [self checkIfDonePosting];
+                                          [self performSelector:@selector(checkIfDonePosting) withObject:nil afterDelay:0];
                                       }
                                   }];
     
@@ -156,7 +156,7 @@
 - (void)postOnTwitter {
     
     NSString *message = self.textView.text;
-    NSString *link = @"www.fwdnow.com";
+    NSString *link = @"www.fwdnow.us";
     if (_name != nil) {
         link = [link stringByAppendingPathComponent:_name];
     }
