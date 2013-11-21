@@ -27,6 +27,7 @@
 		C82F08D5183E85CA0055948C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82F08D4183E85CA0055948C /* MediaPlayer.framework */; };
 		C82F08D7183E89960055948C /* Aloe.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C82F08D6183E89960055948C /* Aloe.mp4 */; };
 		C82F08D9183E96890055948C /* Ashton@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C82F08D8183E96890055948C /* Ashton@2x.jpg */; };
+		C82F08DB183ECB1D0055948C /* Taboo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C82F08DA183ECB1D0055948C /* Taboo.mp4 */; };
 		C8B680A4183E164F007CDF88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A3183E164F007CDF88 /* Foundation.framework */; };
 		C8B680A6183E164F007CDF88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A5183E164F007CDF88 /* CoreGraphics.framework */; };
 		C8B680A8183E164F007CDF88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A7183E164F007CDF88 /* UIKit.framework */; };
@@ -97,6 +98,7 @@
 		C82F08D4183E85CA0055948C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C82F08D6183E89960055948C /* Aloe.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aloe.mp4; sourceTree = "<group>"; };
 		C82F08D8183E96890055948C /* Ashton@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ashton@2x.jpg"; sourceTree = "<group>"; };
+		C82F08DA183ECB1D0055948C /* Taboo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Taboo.mp4; sourceTree = "<group>"; };
 		C8B680A0183E164F007CDF88 /* FWDnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWDnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B680A3183E164F007CDF88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8B680A5183E164F007CDF88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -191,6 +193,7 @@
 			children = (
 				C82F08D2183E84340055948C /* Romo.mp4 */,
 				C82F08D6183E89960055948C /* Aloe.mp4 */,
+				C82F08DA183ECB1D0055948C /* Taboo.mp4 */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				C82F08BE183E51090055948C /* btnFB@2x.png in Resources */,
 				C82F08D0183E82210055948C /* btnPlay@2x.png in Resources */,
 				C8B680AE183E164F007CDF88 /* InfoPlist.strings in Resources */,
+				C82F08DB183ECB1D0055948C /* Taboo.mp4 in Resources */,
 				C82F08B4183E4D840055948C /* FNPostView.xib in Resources */,
 				C82F08D9183E96890055948C /* Ashton@2x.jpg in Resources */,
 			);

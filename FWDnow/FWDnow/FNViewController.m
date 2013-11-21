@@ -82,6 +82,7 @@
     quote.quote = @"Taboo's new song opposing Arizona's Bill 1070 against undocumented immigrants";
     quote.numOfForwards = 40321;
     quote.imageName = @"Taboo.jpg";
+    quote.videoName = @"Taboo.mp4";
     quote.celebrityTwitterHandle = @"TabBep";
     quote.contentStyle = FNItemContentStyleLight;
     [_items addObject:quote];
