@@ -11,5 +11,6 @@
 @interface FNQuote : FNItem
 
 @property (strong, nonatomic) NSString *quote;
+@property (strong, nonatomic) NSString *videoName;
 
 @end

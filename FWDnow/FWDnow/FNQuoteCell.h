@@ -11,5 +11,8 @@
 @interface FNQuoteCell : FNItemCell
 
 @property (strong, nonatomic) IBOutlet UITextView *quoteTextView;
+@property (strong, nonatomic) IBOutlet UIButton *btnPlay;
+
+- (IBAction)btnPlayPressed:(UIButton *)sender;
 
 @end

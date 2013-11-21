@@ -67,6 +67,16 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Ll-3v-bYM" userLabel="Button - play">
+                        <rect key="frame" x="214" y="164" width="72" height="71"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <state key="normal" image="btnPlay.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="btnPlayPressed:" destination="QVP-6m-wC5" eventType="touchUpInside" id="59Y-tW-SJs"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
@@ -79,6 +89,7 @@
             <connections>
                 <outlet property="blurredImageView" destination="Nkj-ft-SmY" id="YST-dv-W82"/>
                 <outlet property="btnFWD" destination="8jm-DA-FD8" id="Qj4-Vp-NYY"/>
+                <outlet property="btnPlay" destination="6Ll-3v-bYM" id="GdO-MY-ooS"/>
                 <outlet property="contentView" destination="NiR-HK-b4I" id="XL7-s9-whk"/>
                 <outlet property="gradientView" destination="k0V-2c-Zpx" id="FEF-RK-I4a"/>
                 <outlet property="imageView" destination="0UN-iI-lGx" id="HpQ-Ie-iUc"/>
@@ -88,6 +99,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="btnPlay.png" width="72" height="71"/>
         <image name="iconFWD.png" width="24" height="24"/>
     </resources>
 </document>

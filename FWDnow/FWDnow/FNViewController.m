@@ -49,6 +49,14 @@
     [_items addObject:quote];
     
     quote = [[FNQuote alloc] init];
+    quote.celebrityName = @"Ashton Kutcher";
+    quote.quote = @"#FWDnow and support immigration reform with me";
+    quote.numOfForwards = 58221;
+    quote.imageName = @"Ashton.jpg";
+    quote.contentStyle = FNItemContentStyleDark;
+    [_items addObject:quote];
+    
+    quote = [[FNQuote alloc] init];
     quote.celebrityName = @"Kanye West";
     quote.quote = @"#FWDnow and support immigration reform with me";
     quote.numOfForwards = 40321;
@@ -77,6 +85,7 @@
     quote.quote = @"Aloe Blacc's new song supporting immigration reform by showing stories never told from undocumented immigrants";
     quote.numOfForwards = 40321;
     quote.imageName = @"Aloe.jpg";
+    quote.videoName = @"Aloe.mp4";
     quote.contentStyle = FNItemContentStyleLight;
     [_items addObject:quote];
     
@@ -101,6 +110,7 @@
     quote.quote = @"“Two million undocumented people “deserve a chance to live their dream and we will all win if they do.”";
     quote.numOfForwards = 40321;
     quote.imageName = @"Sergio.jpg";
+    quote.videoName = @"Romo.mp4";
     quote.contentStyle = FNItemContentStyleDark;
     [_items addObject:quote];
     

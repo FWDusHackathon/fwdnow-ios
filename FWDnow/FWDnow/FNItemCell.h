@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, FNItemCellMode) {
     FNItem *_item;
     FNPostView *_postView;
     FNCallView *_callView;
+    FNItemCellState _cellState;
     FNItemCellMode _cellMode;
 }
 

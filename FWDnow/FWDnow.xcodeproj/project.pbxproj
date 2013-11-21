@@ -22,6 +22,11 @@
 		C82F08CA183E5CB10055948C /* FNCallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82F08C9183E5CB10055948C /* FNCallView.xib */; };
 		C82F08CC183E5D310055948C /* heatmap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08CB183E5D310055948C /* heatmap@2x.png */; };
 		C82F08CE183E65430055948C /* Aloe@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C82F08CD183E65430055948C /* Aloe@2x.jpg */; };
+		C82F08D0183E82210055948C /* btnPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08CF183E82210055948C /* btnPlay@2x.png */; };
+		C82F08D3183E84340055948C /* Romo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C82F08D2183E84340055948C /* Romo.mp4 */; };
+		C82F08D5183E85CA0055948C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82F08D4183E85CA0055948C /* MediaPlayer.framework */; };
+		C82F08D7183E89960055948C /* Aloe.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C82F08D6183E89960055948C /* Aloe.mp4 */; };
+		C82F08D9183E96890055948C /* Ashton@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C82F08D8183E96890055948C /* Ashton@2x.jpg */; };
 		C8B680A4183E164F007CDF88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A3183E164F007CDF88 /* Foundation.framework */; };
 		C8B680A6183E164F007CDF88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A5183E164F007CDF88 /* CoreGraphics.framework */; };
 		C8B680A8183E164F007CDF88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A7183E164F007CDF88 /* UIKit.framework */; };
@@ -87,6 +92,11 @@
 		C82F08C9183E5CB10055948C /* FNCallView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNCallView.xib; sourceTree = "<group>"; };
 		C82F08CB183E5D310055948C /* heatmap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heatmap@2x.png"; sourceTree = "<group>"; };
 		C82F08CD183E65430055948C /* Aloe@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Aloe@2x.jpg"; sourceTree = "<group>"; };
+		C82F08CF183E82210055948C /* btnPlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnPlay@2x.png"; sourceTree = "<group>"; };
+		C82F08D2183E84340055948C /* Romo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Romo.mp4; sourceTree = "<group>"; };
+		C82F08D4183E85CA0055948C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C82F08D6183E89960055948C /* Aloe.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aloe.mp4; sourceTree = "<group>"; };
+		C82F08D8183E96890055948C /* Ashton@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ashton@2x.jpg"; sourceTree = "<group>"; };
 		C8B680A0183E164F007CDF88 /* FWDnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWDnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B680A3183E164F007CDF88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8B680A5183E164F007CDF88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82F08D5183E85CA0055948C /* MediaPlayer.framework in Frameworks */,
 				C8B680A6183E164F007CDF88 /* CoreGraphics.framework in Frameworks */,
 				C8B680A8183E164F007CDF88 /* UIKit.framework in Frameworks */,
 				C8B680A4183E164F007CDF88 /* Foundation.framework in Frameworks */,
@@ -175,6 +186,15 @@
 			name = Posting;
 			sourceTree = "<group>";
 		};
+		C82F08D1183E84230055948C /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				C82F08D2183E84340055948C /* Romo.mp4 */,
+				C82F08D6183E89960055948C /* Aloe.mp4 */,
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
 		C8B68097183E164E007CDF88 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +218,7 @@
 		C8B680A2183E164F007CDF88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C82F08D4183E85CA0055948C /* MediaPlayer.framework */,
 				C8B680A3183E164F007CDF88 /* Foundation.framework */,
 				C8B680A5183E164F007CDF88 /* CoreGraphics.framework */,
 				C8B680A7183E164F007CDF88 /* UIKit.framework */,
@@ -285,6 +306,7 @@
 		C8B680F0183E1BB9007CDF88 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C82F08D1183E84230055948C /* Videos */,
 				C8B680F1183E1BC6007CDF88 /* Images */,
 			);
 			name = Resources;
@@ -293,6 +315,7 @@
 		C8B680F1183E1BC6007CDF88 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C82F08CF183E82210055948C /* btnPlay@2x.png */,
 				C82F08CB183E5D310055948C /* heatmap@2x.png */,
 				C82F08BA183E51090055948C /* btnCongressman@2x.png */,
 				C82F08BB183E51090055948C /* btnFB@2x.png */,
@@ -312,6 +335,7 @@
 				C8B680F8183E1BD0007CDF88 /* Shakira@2x.jpg */,
 				C8B680F9183E1BD0007CDF88 /* Taboo@2x.jpg */,
 				C82F08CD183E65430055948C /* Aloe@2x.jpg */,
+				C82F08D8183E96890055948C /* Ashton@2x.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -423,6 +447,8 @@
 				C8B680EF183E1ABF007CDF88 /* FNQuoteCell.xib in Resources */,
 				C8B68113183E44CC007CDF88 /* iconFWD@2x.png in Resources */,
 				C8B68107183E2491007CDF88 /* FWDnow@2x.png in Resources */,
+				C82F08D7183E89960055948C /* Aloe.mp4 in Resources */,
+				C82F08D3183E84340055948C /* Romo.mp4 in Resources */,
 				C82F08CA183E5CB10055948C /* FNCallView.xib in Resources */,
 				C82F08C4183E553C0055948C /* btnFBSelected@2x.png in Resources */,
 				C8B68101183E1BD0007CDF88 /* Taboo@2x.jpg in Resources */,
@@ -434,8 +460,10 @@
 				C8B68109183E2751007CDF88 /* FNViewController~iPad.xib in Resources */,
 				C8B680FE183E1BD0007CDF88 /* Sarah@2x.jpg in Resources */,
 				C82F08BE183E51090055948C /* btnFB@2x.png in Resources */,
+				C82F08D0183E82210055948C /* btnPlay@2x.png in Resources */,
 				C8B680AE183E164F007CDF88 /* InfoPlist.strings in Resources */,
 				C82F08B4183E4D840055948C /* FNPostView.xib in Resources */,
+				C82F08D9183E96890055948C /* Ashton@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

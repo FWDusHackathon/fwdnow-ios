@@ -10,12 +10,14 @@
 #import "FNQuote.h"
 #import "FNKit.h"
 #import "FNPostView.h"
+#import <MediaPlayer/MediaPlayer.h>
 #import <FXBlurView/FXBlurView.h>
 
 #define CONTENT_SIDE_OFFSET 30.0
 
 @implementation FNQuoteCell {
     BOOL _initialized;
+    MPMoviePlayerController *_player;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -50,6 +52,40 @@
     [self setCellMode:FNItemCellModePost animated:YES];
 }
 
+- (IBAction)btnPlayPressed:(UIButton *)sender {
+    if (_player != nil) {
+        [_player.view removeFromSuperview];
+        _player = nil;
+        
+    }
+    
+    FNQuote *quote = (FNQuote*)_item;
+    NSString *path = [[NSBundle mainBundle] pathForResource:quote.videoName ofType:nil];
+    _player = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL fileURLWithPath:path]];
+    [_player prepareToPlay];
+    [_player.view setFrame:self.bounds];  // player's frame must match parent's
+    [self addSubview:_player.view];
+    [_player play];
+    _player.view.alpha = 0.01;
+    [_player.view fadeIn];
+    [_player setFullscreen:YES animated:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(movieDidExitFullscreen:) name:MPMoviePlayerDidExitFullscreenNotification object:_player];
+}
+
+- (void)movieDidExitFullscreen:(NSNotification *)notif {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerDidExitFullscreenNotification object:_player];
+    
+    //Fade out and remove the video
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         _player.view.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                         [_player.view removeFromSuperview];
+                         _player = nil;
+                     }];
+}
+
 - (void)blurTapped:(UITapGestureRecognizer *)tap {
     if ([tap state] == UIGestureRecognizerStateRecognized) {
         [self setCellMode:FNItemCellModeNormal animated:YES];
@@ -61,6 +97,7 @@
 }
 
 - (void)setCellState:(FNItemCellState)cellState animate:(BOOL)animated {
+    _cellState = cellState;
     
     CGFloat duration = animated?0.3:0.0;
     [UIView animateWithDuration:duration
@@ -72,6 +109,10 @@
                          }
                      }
                      completion:NULL];
+    
+    if (cellState == FNItemCellStateNormal && _cellMode != FNItemCellModeNormal) {
+        [self setCellMode:FNItemCellModeNormal animated:animated];
+    }
     
 }
 
@@ -210,6 +251,12 @@
         [attr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(numString.length, fullNumOfForwardsText.length-numString.length)];
         [attr addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12.0] range:NSMakeRange(0, numString.length)];
         self.numOfFowardsLabel.attributedText = attr;
+    }
+    
+    if (quote.videoName != nil) {
+        self.btnPlay.hidden = NO;
+    } else {
+        self.btnPlay.hidden = YES;
     }
 }
 

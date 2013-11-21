@@ -18,6 +18,7 @@
 @implementation FNPostView {
     BOOL _shouldPostOnFB;
     BOOL _shouldPostOnTwitter;
+    NSString *_name;
 }
 
 - (void)awakeFromNib {
@@ -31,6 +32,7 @@
     
     NSArray *nameWords = [item.celebrityName componentsSeparatedByString:@" "];
     if (nameWords.count > 0) {
+        _name = nameWords[0];
         NSString *text = [NSString stringWithFormat:@"I go FWD with @%@ to support immigration reform #ready4reform", nameWords[0]];
         self.textView.text = text;
     }
@@ -89,6 +91,9 @@
     
     NSString *message = self.textView.text;
     NSString *link = @"www.fwdnow.com";
+    if (_name != nil) {
+        link = [link stringByAppendingPathComponent:_name];
+    }
     
     UIViewController *vc = [self.delegate viewControllerForPostViewShareViews:self];
     
@@ -152,6 +157,9 @@
     
     NSString *message = self.textView.text;
     NSString *link = @"www.fwdnow.com";
+    if (_name != nil) {
+        link = [link stringByAppendingPathComponent:_name];
+    }
     NSURL *twitterAppURL = [NSURL URLWithString:@"twitter://"];
     
     UIViewController *vc = [self.delegate viewControllerForPostViewShareViews:self];

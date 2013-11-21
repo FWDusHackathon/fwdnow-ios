@@ -47,6 +47,8 @@
 - (void)setCellState:(FNItemCellState)cellState animate:(BOOL)animated {
 }
 
+- (void)setCellMode:(FNItemCellMode)cellMode animated:(BOOL)animated {
+}
 #pragma mark - FNPostViewDelegate
 
 - (UIViewController *)viewControllerForPostViewShareViews:(FNPostView *)postView {
