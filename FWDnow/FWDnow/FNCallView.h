@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *leftLabel;
 @property (strong, nonatomic) IBOutlet UILabel *powerLabel;
 
+- (IBAction)btnCallPressed:(UIButton *)sender;
 - (void)setupForItem:(FNItem *)item;
 
 @end

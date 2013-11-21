@@ -36,31 +36,35 @@
     quote.quote = @"“Immigration reform isn’t about politics. It’s about people-mothers, kids. Obama is working for all of them”";
     quote.numOfForwards = 40321;
     quote.imageName = @"Shakira.jpg";
+    quote.celebrityTwitterHandle = @"Shakira";
     quote.contentStyle = FNItemContentStyleLight;
     [_items addObject:quote];
     
     quote = [[FNQuote alloc] init];
     quote.celebrityName = @"Kim Kardashian";
-    quote.quote = @"#FWDnow and support immigration reform with me";
+    quote.quote = @"#FWDnow to support immigration reform with me";
     quote.numOfForwards = 40321;
     quote.imageName = @"Kim.jpg";
+    quote.celebrityTwitterHandle = @"KimKardashian";
     quote.contentStyle = FNItemContentStyleLight;
     quote.contentAlignment = FNItemContentAlignmentRight;
     [_items addObject:quote];
     
     quote = [[FNQuote alloc] init];
     quote.celebrityName = @"Ashton Kutcher";
-    quote.quote = @"#FWDnow and support immigration reform with me";
+    quote.quote = @"#FWDnow to support immigration reform with me";
     quote.numOfForwards = 58221;
     quote.imageName = @"Ashton.jpg";
+    quote.celebrityTwitterHandle = @"aplusk";
     quote.contentStyle = FNItemContentStyleDark;
     [_items addObject:quote];
     
     quote = [[FNQuote alloc] init];
     quote.celebrityName = @"Kanye West";
-    quote.quote = @"#FWDnow and support immigration reform with me";
+    quote.quote = @"#FWDnow to support immigration reform with me";
     quote.numOfForwards = 40321;
     quote.imageName = @"Kanye.jpg";
+    quote.celebrityTwitterHandle = @"kanyewest";
     quote.contentStyle = FNItemContentStyleLight;
     [_items addObject:quote];
     
@@ -69,14 +73,16 @@
     quote.quote = @"“Immigration reform will put 11 million people living in the United States on a pathway to citizenship”";
     quote.numOfForwards = 40321;
     quote.imageName = @"Julianne.jpg";
+    quote.celebrityTwitterHandle = @"_juliannemoore";
     quote.contentStyle = FNItemContentStyleDark;
     [_items addObject:quote];
     
     quote = [[FNQuote alloc] init];
     quote.celebrityName = @"Taboo";
-    quote.quote = @"Taboo's new song opposing Arizona's Bill 1070 against illegal immigration";
+    quote.quote = @"Taboo's new song opposing Arizona's Bill 1070 against undocumented immigrants";
     quote.numOfForwards = 40321;
     quote.imageName = @"Taboo.jpg";
+    quote.celebrityTwitterHandle = @"TabBep";
     quote.contentStyle = FNItemContentStyleLight;
     [_items addObject:quote];
     
@@ -86,6 +92,7 @@
     quote.numOfForwards = 40321;
     quote.imageName = @"Aloe.jpg";
     quote.videoName = @"Aloe.mp4";
+    quote.celebrityTwitterHandle = @"aloeblacc";
     quote.contentStyle = FNItemContentStyleLight;
     [_items addObject:quote];
     
@@ -94,6 +101,7 @@
     quote.quote = @"Sarah is among “more than 100 musicians and actors [who] have signed a letter to President Obama and members of Congress urging them to pass a bill that provides a ‘clear road map to citizenship’ for the nation’s 11 million immigrants”";
     quote.numOfForwards = 40321;
     quote.imageName = @"Sarah.jpg";
+    quote.celebrityTwitterHandle = @"SarahKSilverman";
     quote.contentStyle = FNItemContentStyleDark;
     [_items addObject:quote];
     
@@ -102,6 +110,7 @@
     quote.quote = @"“it's possible to both enforce our laws and, at the same time, embrace the words on the Statue of Liberty that have welcomed generations of huddled masses to our shores.”";
     quote.numOfForwards = 40321;
     quote.imageName = @"Oprah.jpg";
+    quote.celebrityTwitterHandle = @"Oprah";
     quote.contentStyle = FNItemContentStyleLight;
     [_items addObject:quote];
     
@@ -111,6 +120,7 @@
     quote.numOfForwards = 40321;
     quote.imageName = @"Sergio.jpg";
     quote.videoName = @"Romo.mp4";
+    quote.celebrityTwitterHandle = @"SergioRomo54";
     quote.contentStyle = FNItemContentStyleDark;
     [_items addObject:quote];
     

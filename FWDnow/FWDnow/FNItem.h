@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, FNItemContentAlignment) {
 @interface FNItem : NSObject
 
 @property (strong, nonatomic) NSString *celebrityName;
+@property (strong, nonatomic) NSString *celebrityTwitterHandle;
 @property (strong, nonatomic) NSString *imageName;
 @property (nonatomic) NSUInteger numOfForwards;
 @property (nonatomic) FNItemContentStyle contentStyle;

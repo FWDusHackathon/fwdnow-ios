@@ -33,7 +33,7 @@
     NSArray *nameWords = [item.celebrityName componentsSeparatedByString:@" "];
     if (nameWords.count > 0) {
         _name = nameWords[0];
-        NSString *text = [NSString stringWithFormat:@"I go FWD with @%@ to support immigration reform #ready4reform", nameWords[0]];
+        NSString *text = [NSString stringWithFormat:@"I go FWD with %@ to support immigration reform #ready4reform @%@", nameWords[0], item.celebrityTwitterHandle];
         self.textView.text = text;
     }
 }
