@@ -60,6 +60,13 @@
                         <rect key="frame" x="0.0" y="320" width="500" height="80"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     </view>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jSH-rO-jy4">
+                        <rect key="frame" x="30" y="360" width="440" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
@@ -75,6 +82,7 @@
                 <outlet property="contentView" destination="NiR-HK-b4I" id="XL7-s9-whk"/>
                 <outlet property="gradientView" destination="k0V-2c-Zpx" id="FEF-RK-I4a"/>
                 <outlet property="imageView" destination="0UN-iI-lGx" id="HpQ-Ie-iUc"/>
+                <outlet property="numOfFowardsLabel" destination="jSH-rO-jy4" id="1xt-K6-OdM"/>
                 <outlet property="quoteTextView" destination="o4h-t2-5Ko" id="dQk-aG-EnJ"/>
             </connections>
         </collectionViewCell>

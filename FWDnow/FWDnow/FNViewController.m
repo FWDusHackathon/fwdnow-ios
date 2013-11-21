@@ -82,7 +82,7 @@
     
     quote = [[FNQuote alloc] init];
     quote.celebrityName = @"Sarah Silverman";
-    quote.quote = @"Sarah is among “more than 100 musicians and actors [who] have signed a letter to President Obama and members of Congress urging them to pass a bill that provides a ‘clear road map to citizenship’ for the nation’s 11 million unauthorized immigrants”";
+    quote.quote = @"Sarah is among “more than 100 musicians and actors [who] have signed a letter to President Obama and members of Congress urging them to pass a bill that provides a ‘clear road map to citizenship’ for the nation’s 11 million immigrants”";
     quote.numOfForwards = 40321;
     quote.imageName = @"Sarah.jpg";
     quote.contentStyle = FNItemContentStyleDark;

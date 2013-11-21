@@ -202,6 +202,14 @@
         
         CGSize btnSize = [self.btnFWD sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
         self.btnFWD.width = btnSize.width + 40.0;
+        
+        NSString *numString = [NSString stringWithFormat:@"%d", quote.numOfForwards];
+        NSString *fullNumOfForwardsText = [NSString stringWithFormat:@"%@ people have forwarded with %@", numString, nameWords[0]];
+        NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:fullNumOfForwardsText];
+        [attr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.24 green:0.50 blue:0.73 alpha:1.0] range:NSMakeRange(0, numString.length)];
+        [attr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(numString.length, fullNumOfForwardsText.length-numString.length)];
+        [attr addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:12.0] range:NSMakeRange(0, numString.length)];
+        self.numOfFowardsLabel.attributedText = attr;
     }
 }
 
