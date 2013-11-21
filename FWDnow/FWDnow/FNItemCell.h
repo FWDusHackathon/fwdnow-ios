@@ -21,7 +21,9 @@ typedef NS_ENUM(NSInteger, FNItemCellMode) {
 
 @class FNItem;
 
-@interface FNItemCell : UICollectionViewCell
+@interface FNItemCell : UICollectionViewCell {
+    FNItem *_item;
+}
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIImageView *blurredImageView;

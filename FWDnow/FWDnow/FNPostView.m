@@ -7,25 +7,24 @@
 //
 
 #import "FNPostView.h"
+#import "FNItem.h"
 
 @implementation FNPostView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    self.layer.borderColor = [UIColor blackColor].CGColor;
+    self.layer.borderWidth = 2.0;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+- (void)setupForItem:(FNItem *)item {
+    
+    NSArray *nameWords = [item.celebrityName componentsSeparatedByString:@" "];
+    if (nameWords.count > 0) {
+        NSString *text = [NSString stringWithFormat:@"I go FWD with @%@ to support immigration reform #ready4reform", nameWords[0]];
+        self.textView.text = text;
+    }
 }
-*/
 
 @end

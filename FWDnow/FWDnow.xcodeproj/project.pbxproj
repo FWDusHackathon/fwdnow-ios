@@ -10,6 +10,11 @@
 		12C60396A5584DA89F032745 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD0947E196A4D7CA8BD8CD8 /* libPods.a */; };
 		C82F08B2183E4D730055948C /* FNPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F08B1183E4D730055948C /* FNPostView.m */; };
 		C82F08B4183E4D840055948C /* FNPostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82F08B3183E4D840055948C /* FNPostView.xib */; };
+		C82F08B7183E4F160055948C /* UIView+ShowAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F08B6183E4F160055948C /* UIView+ShowAnimations.m */; };
+		C82F08B9183E50E30055948C /* iconFWDLight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08B8183E50E30055948C /* iconFWDLight@2x.png */; };
+		C82F08BD183E51090055948C /* btnCongressman@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08BA183E51090055948C /* btnCongressman@2x.png */; };
+		C82F08BE183E51090055948C /* btnFB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08BB183E51090055948C /* btnFB@2x.png */; };
+		C82F08BF183E51090055948C /* btnTwitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08BC183E51090055948C /* btnTwitter@2x.png */; };
 		C8B680A4183E164F007CDF88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A3183E164F007CDF88 /* Foundation.framework */; };
 		C8B680A6183E164F007CDF88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A5183E164F007CDF88 /* CoreGraphics.framework */; };
 		C8B680A8183E164F007CDF88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A7183E164F007CDF88 /* UIKit.framework */; };
@@ -61,6 +66,12 @@
 		C82F08B0183E4D730055948C /* FNPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNPostView.h; sourceTree = "<group>"; };
 		C82F08B1183E4D730055948C /* FNPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNPostView.m; sourceTree = "<group>"; };
 		C82F08B3183E4D840055948C /* FNPostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNPostView.xib; sourceTree = "<group>"; };
+		C82F08B5183E4F160055948C /* UIView+ShowAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowAnimations.h"; sourceTree = "<group>"; };
+		C82F08B6183E4F160055948C /* UIView+ShowAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowAnimations.m"; sourceTree = "<group>"; };
+		C82F08B8183E50E30055948C /* iconFWDLight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconFWDLight@2x.png"; sourceTree = "<group>"; };
+		C82F08BA183E51090055948C /* btnCongressman@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnCongressman@2x.png"; sourceTree = "<group>"; };
+		C82F08BB183E51090055948C /* btnFB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnFB@2x.png"; sourceTree = "<group>"; };
+		C82F08BC183E51090055948C /* btnTwitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnTwitter@2x.png"; sourceTree = "<group>"; };
 		C8B680A0183E164F007CDF88 /* FWDnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWDnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B680A3183E164F007CDF88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8B680A5183E164F007CDF88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -181,8 +192,8 @@
 		C8B680A9183E164F007CDF88 /* FWDnow */ = {
 			isa = PBXGroup;
 			children = (
-				C8B6810A183E2FFE007CDF88 /* Categories */,
 				C8B680F0183E1BB9007CDF88 /* Resources */,
+				C8B6810A183E2FFE007CDF88 /* Categories */,
 				C82F08AF183E4D3F0055948C /* Posting */,
 				C8B680E7183E1A23007CDF88 /* Cell views */,
 				C8B680DD183E195B007CDF88 /* Data objects */,
@@ -264,6 +275,10 @@
 		C8B680F1183E1BC6007CDF88 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C82F08BA183E51090055948C /* btnCongressman@2x.png */,
+				C82F08BB183E51090055948C /* btnFB@2x.png */,
+				C82F08BC183E51090055948C /* btnTwitter@2x.png */,
+				C82F08B8183E50E30055948C /* iconFWDLight@2x.png */,
 				C8B68112183E44CC007CDF88 /* iconFWD@2x.png */,
 				C8B68106183E2491007CDF88 /* FWDnow@2x.png */,
 				C8B680F2183E1BD0007CDF88 /* Julianne@2x.jpg */,
@@ -281,6 +296,8 @@
 		C8B6810A183E2FFE007CDF88 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C82F08B5183E4F160055948C /* UIView+ShowAnimations.h */,
+				C82F08B6183E4F160055948C /* UIView+ShowAnimations.m */,
 				C8B68111183E426E007CDF88 /* FNKit.h */,
 				C8B6810E183E4256007CDF88 /* UIView+Positioning.h */,
 				C8B6810F183E4256007CDF88 /* UIView+Positioning.m */,
@@ -373,6 +390,9 @@
 				C8B680FC183E1BD0007CDF88 /* Kim@2x.jpg in Resources */,
 				C8B68100183E1BD0007CDF88 /* Shakira@2x.jpg in Resources */,
 				C8B680BF183E164F007CDF88 /* Images.xcassets in Resources */,
+				C82F08BF183E51090055948C /* btnTwitter@2x.png in Resources */,
+				C82F08B9183E50E30055948C /* iconFWDLight@2x.png in Resources */,
+				C82F08BD183E51090055948C /* btnCongressman@2x.png in Resources */,
 				C8B680EF183E1ABF007CDF88 /* FNQuoteCell.xib in Resources */,
 				C8B68113183E44CC007CDF88 /* iconFWD@2x.png in Resources */,
 				C8B68107183E2491007CDF88 /* FWDnow@2x.png in Resources */,
@@ -384,6 +404,7 @@
 				C8B680DC183E185E007CDF88 /* FNViewController.xib in Resources */,
 				C8B68109183E2751007CDF88 /* FNViewController~iPad.xib in Resources */,
 				C8B680FE183E1BD0007CDF88 /* Sarah@2x.jpg in Resources */,
+				C82F08BE183E51090055948C /* btnFB@2x.png in Resources */,
 				C8B680AE183E164F007CDF88 /* InfoPlist.strings in Resources */,
 				C82F08B4183E4D840055948C /* FNPostView.xib in Resources */,
 			);
@@ -443,6 +464,7 @@
 				C8B680E0183E1977007CDF88 /* FNItem.m in Sources */,
 				C82F08B2183E4D730055948C /* FNPostView.m in Sources */,
 				C8B68110183E4256007CDF88 /* UIView+Positioning.m in Sources */,
+				C82F08B7183E4F160055948C /* UIView+ShowAnimations.m in Sources */,
 				C8B680BD183E164F007CDF88 /* FNViewController.m in Sources */,
 				C8B680EA183E1A3D007CDF88 /* FNItemCell.m in Sources */,
 				C8B680E3183E1995007CDF88 /* FNQuote.m in Sources */,

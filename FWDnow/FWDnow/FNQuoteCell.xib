@@ -17,10 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
-                    <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="k0V-2c-Zpx" userLabel="View - gradient">
-                        <rect key="frame" x="0.0" y="320" width="500" height="80"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    </view>
                     <view contentMode="scaleToFill" id="NiR-HK-b4I" userLabel="View - content">
                         <rect key="frame" x="30" y="30" width="303" height="260"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -60,6 +56,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
+                    <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="k0V-2c-Zpx" userLabel="View - gradient">
+                        <rect key="frame" x="0.0" y="320" width="500" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>

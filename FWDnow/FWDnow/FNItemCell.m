@@ -41,7 +41,7 @@
 }
 
 - (void)setupForItem:(FNItem *)item {
-    
+    _item = item;
 }
 
 - (void)setCellState:(FNItemCellState)cellState animate:(BOOL)animated {

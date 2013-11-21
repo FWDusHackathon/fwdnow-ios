@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class FNItem;
+
 @interface FNPostView : UIView
+
+@property (strong, nonatomic) IBOutlet UITextView *textView;
+
+- (void)setupForItem:(FNItem *)item;
 
 @end
