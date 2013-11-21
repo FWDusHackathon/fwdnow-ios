@@ -84,10 +84,9 @@
                                                             otherButtonTitles:nil]
                                            show];
                                       } else {
+                                          _shouldPostOnFB = NO;
                                           //Success, let's see if we need to show twitter
-                                          if (_shouldPostOnTwitter) {
-                                              [self postOnTwitter];
-                                          }
+                                          [self checkIfDonePosting];
                                       }
                                   }];
     
@@ -115,9 +114,8 @@
                      // Handle the publish feed callback
                      NSLog(@"Posted!");
                      //Success, let's see if we need to show twitter
-                     if (_shouldPostOnTwitter) {
-                         [self postOnTwitter];
-                     }
+                     _shouldPostOnFB = NO;
+                     [self checkIfDonePosting];
                  }
              }
          }];
@@ -139,7 +137,11 @@
         
         [composer addURL:[NSURL URLWithString:link]];
         [composer setCompletionHandler:^(SLComposeViewControllerResult result) {
-            [vc dismissViewControllerAnimated:YES completion:NULL];
+            _shouldPostOnTwitter = NO;
+            [vc dismissViewControllerAnimated:YES
+                                   completion:^{
+                                       [self checkIfDonePosting];
+                                   }];
         }];
         
         [vc presentViewController:composer animated:YES completion:nil];
@@ -149,11 +151,26 @@
         NSString *encodedMessage = [message stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSURL *postURL = [NSURL URLWithString:[NSString stringWithFormat:@"twitter://post?message=%@", encodedMessage]];
         [[UIApplication sharedApplication] openURL:postURL];
+        _shouldPostOnTwitter = NO;
         
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Twitter account" message:@"Please connect a Twitter account by going to the Settings app first" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+        _shouldPostOnTwitter = NO;
     }
+    
+}
+
+- (void)checkIfDonePosting {
+    
+    if (_shouldPostOnFB) {
+        [self postOnFacebook];
+    } else if (_shouldPostOnTwitter) {
+        [self postOnTwitter];
+    } else {
+        [self.delegate postViewDidFinishPosting:self];
+    }
+    
     
 }
 

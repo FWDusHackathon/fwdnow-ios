@@ -13,6 +13,7 @@
 
 @interface FNPostView : UIView
 
+@property (strong, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) IBOutlet UIButton *btnFB;
 @property (strong, nonatomic) IBOutlet UIButton *btnTwitter;
@@ -31,5 +32,6 @@
 @protocol FNPostViewDelegate <NSObject>
 
 - (UIViewController *)viewControllerForPostViewShareViews:(FNPostView *)postView;
+- (void)postViewDidFinishPosting:(FNPostView *)postView;
 
 @end

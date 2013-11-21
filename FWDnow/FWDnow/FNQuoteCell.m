@@ -81,6 +81,8 @@
 
 - (void)setCellMode:(FNItemCellMode)cellMode animated:(BOOL)animated {
     
+    _cellMode = cellMode;
+    
     CGFloat duration = animated?0.3:0.0;
     
     if (cellMode == FNItemCellModeNormal) {
@@ -88,8 +90,14 @@
         [UIView animateWithDuration:duration
                          animations:^{
                              self.blurredImageView.alpha = 0.0;
+                             _callView.alpha = 0.0;
+                             _callView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.9, 0.9);
                          }
-                         completion:NULL];
+                         completion:^(BOOL finished){
+                             [_callView removeFromSuperview];
+                             _callView = nil;
+                         }];
+        
         [_postView fadeOutToBottomtWithCompletion:NULL];
     
     } else if (cellMode == FNItemCellModePost) {
@@ -117,6 +125,42 @@
                          }
                          completion:NULL];
         [_postView fadeInFromBottomWithDelay:0.0 completion:NULL];
+    
+    } else if (cellMode == FNItemCellModeCall) {
+        
+        if (_callView == nil) {
+            NSArray *elements = [[NSBundle mainBundle] loadNibNamed:@"FNCallView" owner:nil options:nil];
+            if ([elements count] > 0) {
+                _callView = elements[0];
+            }
+        }
+        
+        [_callView setupForItem:_item];
+        _callView.center = self.imageView.center;
+        _callView.alpha = 0.0;
+        [self addSubview:_callView];
+        
+        //We want to animate the post view to the size of the call view and then remove it
+        [_postView.containerView fadeToAlpha:0.0 duration:0.1];
+        
+        [UIView animateWithDuration:duration
+                         animations:^{
+                             _postView.frame = _callView.frame;
+                         }
+                         completion:^(BOOL finished){
+                             //Transition the views
+                             [UIView animateWithDuration:duration
+                                              animations:^{
+                                                  _callView.alpha = 1.0;
+                                                  _postView.alpha = 0.0;
+                                              }
+                                              completion:^(BOOL finished){
+                                                  
+                                                  [_postView removeFromSuperview];
+                                                  _postView = nil;
+                                              }];
+                         }];
+        
     }
 }
 

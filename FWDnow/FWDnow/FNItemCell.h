@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FNPostView.h"
+#import "FNCallView.h"
 
 typedef NS_ENUM(NSInteger, FNItemCellState) {
     FNItemCellStateNormal = 0,
@@ -26,6 +27,8 @@ typedef NS_ENUM(NSInteger, FNItemCellMode) {
 @interface FNItemCell : UICollectionViewCell <FNPostViewDelegate> {
     FNItem *_item;
     FNPostView *_postView;
+    FNCallView *_callView;
+    FNItemCellMode _cellMode;
 }
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;

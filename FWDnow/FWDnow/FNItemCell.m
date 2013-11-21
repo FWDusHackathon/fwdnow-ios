@@ -53,4 +53,9 @@
     return [self.delegate viewControllerForItemCell:self];
 }
 
+- (void)postViewDidFinishPosting:(FNPostView *)postView {
+    //We want to show the success post view
+    [self setCellMode:FNItemCellModeCall animated:YES];
+}
+
 @end
