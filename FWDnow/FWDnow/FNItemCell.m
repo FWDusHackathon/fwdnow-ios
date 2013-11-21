@@ -36,6 +36,10 @@
     }
 }
 
+- (IBAction)btnFWDPressed:(UIButton *)sender {
+    
+}
+
 - (void)setupForItem:(FNItem *)item {
     
 }

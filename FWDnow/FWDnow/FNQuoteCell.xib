@@ -49,10 +49,17 @@
                                         <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnFWDPressed:" destination="QVP-6m-wC5" eventType="touchUpInside" id="dMD-sI-8Rs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Nkj-ft-SmY" userLabel="Image View - blurred">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
@@ -63,6 +70,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="blurredImageView" destination="Nkj-ft-SmY" id="YST-dv-W82"/>
                 <outlet property="btnFWD" destination="8jm-DA-FD8" id="Qj4-Vp-NYY"/>
                 <outlet property="contentView" destination="NiR-HK-b4I" id="XL7-s9-whk"/>
                 <outlet property="gradientView" destination="k0V-2c-Zpx" id="FEF-RK-I4a"/>

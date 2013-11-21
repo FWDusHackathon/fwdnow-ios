@@ -9,6 +9,7 @@
 #import "FNQuoteCell.h"
 #import "FNQuote.h"
 #import "FNKit.h"
+#import <FXBlurView/FXBlurView.h>
 
 #define CONTENT_SIDE_OFFSET 30.0
 
@@ -31,6 +32,10 @@
     self.btnFWD.layer.borderWidth = 2.0;
 }
 
+- (IBAction)btnFWDPressed:(UIButton *)sender {
+    [self setCellMode:FNItemCellModePost animated:YES];
+}
+
 - (void)setCellState:(FNItemCellState)cellState {
     [self setCellState:cellState animate:NO];
 }
@@ -50,10 +55,36 @@
     
 }
 
+- (void)setCellMode:(FNItemCellMode)cellMode {
+    [self setCellMode:cellMode];
+}
+
+- (void)setCellMode:(FNItemCellMode)cellMode animated:(BOOL)animated {
+    
+    CGFloat duration = animated?0.3:0.0;
+    
+    if (cellMode == FNItemCellModeNormal) {
+        [UIView animateWithDuration:duration
+                         animations:^{
+                             self.blurredImageView.alpha = 0.0;
+                         }
+                         completion:NULL];
+    
+    } else if (cellMode == FNItemCellModePost) {
+        
+        [UIView animateWithDuration:duration
+                         animations:^{
+                             self.blurredImageView.alpha = 1.0;
+                         }
+                         completion:NULL];
+    }
+}
+
 - (void)setupForItem:(FNQuote *)quote {
     
     UIImage *img = [UIImage imageNamed:quote.imageName];
     self.imageView.image = img;
+    self.blurredImageView.image = [img blurredImageWithRadius:15.0 iterations:3 tintColor:[UIColor blackColor]];
     
     self.quoteTextView.text = quote.quote;
     

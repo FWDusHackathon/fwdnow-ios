@@ -13,20 +13,31 @@ typedef NS_ENUM(NSInteger, FNItemCellState) {
     FNItemCellStateFull
 };
 
+typedef NS_ENUM(NSInteger, FNItemCellMode) {
+    FNItemCellModeNormal = 0,
+    FNItemCellModePost,
+    FNItemCellModeCall
+};
+
 @class FNItem;
 
 @interface FNItemCell : UICollectionViewCell
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *blurredImageView;
 @property (strong, nonatomic) IBOutlet UIButton *btnFWD;
 @property (strong, nonatomic) IBOutlet UILabel *numOfFowardsLabel;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) IBOutlet UIView *gradientView;
 @property (nonatomic) FNItemCellState cellState;
+@property (nonatomic) FNItemCellMode cellMode;
 
 + (CGSize)sizeForState:(FNItemCellState)state;
 
+- (IBAction)btnFWDPressed:(UIButton *)sender;
+
 - (void)setupForItem:(FNItem *)item;
 - (void)setCellState:(FNItemCellState)cellState animate:(BOOL)animated;
+- (void)setCellMode:(FNItemCellMode)cellMode animated:(BOOL)animated;
 
 @end
