@@ -11,6 +11,9 @@
 #import <FacebookSDK/Facebook.h>
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
+#import "FNKit.h"
+
+#define DEFAULT_HEIGHT  200.0
 
 @implementation FNPostView {
     BOOL _shouldPostOnFB;
@@ -43,6 +46,29 @@
 
 - (IBAction)btnCongressmanPressed:(UIButton *)sender {
     sender.selected = !sender.selected;
+    [self setZipcodeVisible:sender.selected];
+}
+
+- (void)setZipcodeVisible:(BOOL)visible {
+    
+    CGFloat alpha = visible?1.0:0.0;
+    CGRect frame = self.frame;
+    if (visible) {
+        frame.size.height = DEFAULT_HEIGHT + _zipcodeContainer.height + 10.0;
+        frame.origin.y = (self.superview.height-frame.size.height)/2.0;
+    } else {
+        frame.size.height = DEFAULT_HEIGHT;
+        frame.origin.y = (self.superview.height-frame.size.height)/2.0;
+    }
+    
+    [UIView animateWithDuration:0.3
+                          delay:0.0
+                        options:UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                         _zipcodeContainer.alpha = alpha;
+                         self.frame = frame;
+                     }
+                     completion:NULL];
 }
 
 - (IBAction)btnFWDNowPressed:(UIButton *)sender {
