@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, FNItemCellState) {
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIButton *btnFWD;
 @property (strong, nonatomic) IBOutlet UILabel *numOfFowardsLabel;
+@property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) IBOutlet UIView *gradientView;
 @property (nonatomic) FNItemCellState cellState;
 

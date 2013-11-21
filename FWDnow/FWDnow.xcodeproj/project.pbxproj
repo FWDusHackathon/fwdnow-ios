@@ -39,6 +39,8 @@
 		C8B68107183E2491007CDF88 /* FWDnow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B68106183E2491007CDF88 /* FWDnow@2x.png */; };
 		C8B68109183E2751007CDF88 /* FNViewController~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8B68108183E2751007CDF88 /* FNViewController~iPad.xib */; };
 		C8B6810D183E3009007CDF88 /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B6810C183E3009007CDF88 /* UIView+Utilities.m */; };
+		C8B68110183E4256007CDF88 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B6810F183E4256007CDF88 /* UIView+Positioning.m */; };
+		C8B68113183E44CC007CDF88 /* iconFWD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B68112183E44CC007CDF88 /* iconFWD@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,10 @@
 		C8B68108183E2751007CDF88 /* FNViewController~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "FNViewController~iPad.xib"; sourceTree = "<group>"; };
 		C8B6810B183E3009007CDF88 /* UIView+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utilities.h"; sourceTree = "<group>"; };
 		C8B6810C183E3009007CDF88 /* UIView+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utilities.m"; sourceTree = "<group>"; };
+		C8B6810E183E4256007CDF88 /* UIView+Positioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Positioning.h"; sourceTree = "<group>"; };
+		C8B6810F183E4256007CDF88 /* UIView+Positioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Positioning.m"; sourceTree = "<group>"; };
+		C8B68111183E426E007CDF88 /* FNKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNKit.h; sourceTree = "<group>"; };
+		C8B68112183E44CC007CDF88 /* iconFWD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconFWD@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +242,7 @@
 		C8B680F1183E1BC6007CDF88 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C8B68112183E44CC007CDF88 /* iconFWD@2x.png */,
 				C8B68106183E2491007CDF88 /* FWDnow@2x.png */,
 				C8B680F2183E1BD0007CDF88 /* Julianne@2x.jpg */,
 				C8B680F3183E1BD0007CDF88 /* Kanye@2x.jpg */,
@@ -252,6 +259,9 @@
 		C8B6810A183E2FFE007CDF88 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C8B68111183E426E007CDF88 /* FNKit.h */,
+				C8B6810E183E4256007CDF88 /* UIView+Positioning.h */,
+				C8B6810F183E4256007CDF88 /* UIView+Positioning.m */,
 				C8B6810B183E3009007CDF88 /* UIView+Utilities.h */,
 				C8B6810C183E3009007CDF88 /* UIView+Utilities.m */,
 			);
@@ -340,6 +350,7 @@
 				C8B68100183E1BD0007CDF88 /* Shakira@2x.jpg in Resources */,
 				C8B680BF183E164F007CDF88 /* Images.xcassets in Resources */,
 				C8B680EF183E1ABF007CDF88 /* FNQuoteCell.xib in Resources */,
+				C8B68113183E44CC007CDF88 /* iconFWD@2x.png in Resources */,
 				C8B68107183E2491007CDF88 /* FWDnow@2x.png in Resources */,
 				C8B68101183E1BD0007CDF88 /* Taboo@2x.jpg in Resources */,
 				C8B680FA183E1BD0007CDF88 /* Julianne@2x.jpg in Resources */,
@@ -372,6 +383,7 @@
 				C8B680B0183E164F007CDF88 /* main.m in Sources */,
 				C8B680ED183E1A4B007CDF88 /* FNQuoteCell.m in Sources */,
 				C8B680E0183E1977007CDF88 /* FNItem.m in Sources */,
+				C8B68110183E4256007CDF88 /* UIView+Positioning.m in Sources */,
 				C8B680BD183E164F007CDF88 /* FNViewController.m in Sources */,
 				C8B680EA183E1A3D007CDF88 /* FNItemCell.m in Sources */,
 				C8B680E3183E1995007CDF88 /* FNQuote.m in Sources */,

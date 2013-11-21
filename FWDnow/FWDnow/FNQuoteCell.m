@@ -8,6 +8,9 @@
 
 #import "FNQuoteCell.h"
 #import "FNQuote.h"
+#import "FNKit.h"
+
+#define CONTENT_SIDE_OFFSET 30.0
 
 @implementation FNQuoteCell
 
@@ -23,6 +26,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.cellState = FNItemCellStateNormal;
+    
+    self.btnFWD.layer.borderColor = [UIColor blackColor].CGColor;
+    self.btnFWD.layer.borderWidth = 2.0;
 }
 
 - (void)setCellState:(FNItemCellState)cellState {
@@ -35,9 +41,9 @@
     [UIView animateWithDuration:duration
                      animations:^{
                          if (cellState == FNItemCellStateNormal) {
-                             self.quoteTextView.alpha = 0.0;
+                             self.contentView.alpha = 0.0;
                          } else {
-                             self.quoteTextView.alpha = 1.0;
+                             self.contentView.alpha = 1.0;
                          }
                      }
                      completion:NULL];
@@ -45,13 +51,37 @@
 }
 
 - (void)setupForItem:(FNQuote *)quote {
+    
     UIImage *img = [UIImage imageNamed:quote.imageName];
     self.imageView.image = img;
+    
+    self.quoteTextView.text = quote.quote;
     
     if (quote.contentStyle == FNItemContentStyleLight) {
         self.quoteTextView.textColor = [UIColor whiteColor];
     } else {
         self.quoteTextView.textColor = [UIColor blackColor];
+    }
+    
+    if (quote.contentAlignment == FNItemContentAlignmentLeft) {
+        self.contentView.x = CONTENT_SIDE_OFFSET;
+        self.contentView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin;
+        self.quoteTextView.textAlignment = NSTextAlignmentLeft;
+    } else {
+        self.contentView.x = self.width - self.contentView.width - CONTENT_SIDE_OFFSET;
+        self.contentView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+        self.quoteTextView.textAlignment = NSTextAlignmentRight;
+    }
+    
+    self.quoteTextView.font = [UIFont fontWithName:@"HelveticaNeue" size:18.0];
+    
+    NSArray *nameWords = [quote.celebrityName componentsSeparatedByString:@" "];
+    if (nameWords.count > 0) {
+        NSString *btnFWDText = [NSString stringWithFormat:@"FWD now with %@", nameWords[0]];
+        [self.btnFWD setTitle:btnFWDText forState:UIControlStateNormal];
+        
+        CGSize btnSize = [self.btnFWD sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
+        self.btnFWD.width = btnSize.width + 40.0;
     }
 }
 

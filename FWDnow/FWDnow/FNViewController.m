@@ -46,6 +46,7 @@
     quote.numOfForwards = 40321;
     quote.imageName = @"Kim.jpg";
     quote.contentStyle = FNItemContentStyleLight;
+    quote.contentAlignment = FNItemContentAlignmentRight;
     [_items addObject:quote];
     
     quote = [[FNQuote alloc] init];
@@ -177,9 +178,6 @@
                 }
                 
             }
-            
-            FNItemCell *cell = (FNItemCell*)[collectionView cellForItemAtIndexPath:_expandedIndexPath];
-            //[cell setCellState:FNItemCellStateNormal animate:YES];
         
         } else {
             //Normal logic

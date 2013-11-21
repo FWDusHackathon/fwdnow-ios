@@ -13,11 +13,17 @@ typedef NS_ENUM(NSInteger, FNItemContentStyle) {
     FNItemContentStyleDark
 };
 
+typedef NS_ENUM(NSInteger, FNItemContentAlignment) {
+    FNItemContentAlignmentLeft = 0,
+    FNItemContentAlignmentRight
+};
+
 @interface FNItem : NSObject
 
 @property (strong, nonatomic) NSString *celebrityName;
 @property (strong, nonatomic) NSString *imageName;
 @property (nonatomic) NSUInteger numOfForwards;
 @property (nonatomic) FNItemContentStyle contentStyle;
+@property (nonatomic) FNItemContentAlignment contentAlignment;
 
 @end
