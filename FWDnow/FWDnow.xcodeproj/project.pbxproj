@@ -21,6 +21,7 @@
 		C82F08C8183E5CA20055948C /* FNCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F08C7183E5CA20055948C /* FNCallView.m */; };
 		C82F08CA183E5CB10055948C /* FNCallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82F08C9183E5CB10055948C /* FNCallView.xib */; };
 		C82F08CC183E5D310055948C /* heatmap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82F08CB183E5D310055948C /* heatmap@2x.png */; };
+		C82F08CE183E65430055948C /* Aloe@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C82F08CD183E65430055948C /* Aloe@2x.jpg */; };
 		C8B680A4183E164F007CDF88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A3183E164F007CDF88 /* Foundation.framework */; };
 		C8B680A6183E164F007CDF88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A5183E164F007CDF88 /* CoreGraphics.framework */; };
 		C8B680A8183E164F007CDF88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A7183E164F007CDF88 /* UIKit.framework */; };
@@ -85,6 +86,7 @@
 		C82F08C7183E5CA20055948C /* FNCallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNCallView.m; sourceTree = "<group>"; };
 		C82F08C9183E5CB10055948C /* FNCallView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNCallView.xib; sourceTree = "<group>"; };
 		C82F08CB183E5D310055948C /* heatmap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heatmap@2x.png"; sourceTree = "<group>"; };
+		C82F08CD183E65430055948C /* Aloe@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Aloe@2x.jpg"; sourceTree = "<group>"; };
 		C8B680A0183E164F007CDF88 /* FWDnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWDnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B680A3183E164F007CDF88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8B680A5183E164F007CDF88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -309,6 +311,7 @@
 				C8B680F7183E1BD0007CDF88 /* Sergio@2x.jpg */,
 				C8B680F8183E1BD0007CDF88 /* Shakira@2x.jpg */,
 				C8B680F9183E1BD0007CDF88 /* Taboo@2x.jpg */,
+				C82F08CD183E65430055948C /* Aloe@2x.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82F08CE183E65430055948C /* Aloe@2x.jpg in Resources */,
 				C8B680FD183E1BD0007CDF88 /* Oprah@2x.jpg in Resources */,
 				C8B680FC183E1BD0007CDF88 /* Kim@2x.jpg in Resources */,
 				C8B68100183E1BD0007CDF88 /* Shakira@2x.jpg in Resources */,

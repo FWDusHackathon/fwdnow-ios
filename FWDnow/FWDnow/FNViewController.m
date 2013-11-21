@@ -72,6 +72,38 @@
     quote.contentStyle = FNItemContentStyleLight;
     [_items addObject:quote];
     
+    quote = [[FNQuote alloc] init];
+    quote.celebrityName = @"Aloe Blacc";
+    quote.quote = @"Aloe Blacc's new song supporting immigration reform by showing stories never told from undocumented immigrants";
+    quote.numOfForwards = 40321;
+    quote.imageName = @"Aloe.jpg";
+    quote.contentStyle = FNItemContentStyleLight;
+    [_items addObject:quote];
+    
+    quote = [[FNQuote alloc] init];
+    quote.celebrityName = @"Sarah Silverman";
+    quote.quote = @"Sarah is among “more than 100 musicians and actors [who] have signed a letter to President Obama and members of Congress urging them to pass a bill that provides a ‘clear road map to citizenship’ for the nation’s 11 million unauthorized immigrants”";
+    quote.numOfForwards = 40321;
+    quote.imageName = @"Sarah.jpg";
+    quote.contentStyle = FNItemContentStyleDark;
+    [_items addObject:quote];
+    
+    quote = [[FNQuote alloc] init];
+    quote.celebrityName = @"Oprah";
+    quote.quote = @"“it's possible to both enforce our laws and, at the same time, embrace the words on the Statue of Liberty that have welcomed generations of huddled masses to our shores.”";
+    quote.numOfForwards = 40321;
+    quote.imageName = @"Oprah.jpg";
+    quote.contentStyle = FNItemContentStyleLight;
+    [_items addObject:quote];
+    
+    quote = [[FNQuote alloc] init];
+    quote.celebrityName = @"Sergio Romo";
+    quote.quote = @"“Two million undocumented people “deserve a chance to live their dream and we will all win if they do.”";
+    quote.numOfForwards = 40321;
+    quote.imageName = @"Sergio.jpg";
+    quote.contentStyle = FNItemContentStyleDark;
+    [_items addObject:quote];
+    
     //Start with teh first one expanded
     _expandedIndexPath = [NSIndexPath indexPathForItem:0 inSection:0];
     
