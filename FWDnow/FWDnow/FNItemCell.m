@@ -66,8 +66,14 @@
 }
 
 - (void)postViewDidFinishPosting:(FNPostView *)postView {
-    //We want to show the success post view
-    [self setCellMode:FNItemCellModeCall animated:YES];
+    //We want to show the success post view and the call view on the iPad
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        [self setCellMode:FNItemCellModeCall animated:YES];
+    } else {
+        //On the iPhone we are done
+        [self setCellMode:FNItemCellModeNormal animated:YES];
+    }
+    
 }
 
 #pragma mark - FNCallViewDelegate
