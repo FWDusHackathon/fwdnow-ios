@@ -130,7 +130,11 @@
     
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"FNQuoteCell" bundle:nil] forCellWithReuseIdentifier:@"FNQuoteCell"];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"FNHeader" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"FNHeader"];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        [self.collectionView registerNib:[UINib nibWithNibName:@"FNHeader" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"FNHeader"];
+    } else {
+        [self.collectionView registerNib:[UINib nibWithNibName:@"FNHeader~iPhone" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"FNHeader"];
+    }
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
 }

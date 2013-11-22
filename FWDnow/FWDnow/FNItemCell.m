@@ -13,11 +13,20 @@
 @implementation FNItemCell
 
 + (CGSize)sizeForState:(FNItemCellState)state {
-    if (state == FNItemCellStateNormal) {
-        return CGSizeMake(467.0, 200.0);
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        if (state == FNItemCellStateNormal) {
+            return CGSizeMake(467.0, 200.0);
+        } else {
+            return CGSizeMake(964.0, 400.0);
+        }
     } else {
-        return CGSizeMake(964.0, 400.0);
+        if (state == FNItemCellStateNormal) {
+            return CGSizeMake(310.0, 150.0);
+        } else {
+            return CGSizeMake(310.0, 300.0);
+        }
     }
+    
 }
 
 - (void)awakeFromNib {

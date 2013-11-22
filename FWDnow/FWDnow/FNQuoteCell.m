@@ -13,11 +13,11 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <FXBlurView/FXBlurView.h>
 
-#define CONTENT_SIDE_OFFSET 30.0
-
 @implementation FNQuoteCell {
     BOOL _initialized;
     MPMoviePlayerController *_player;
+    CGFloat _contentSideOffset;
+    CGFloat _quoteFontSize;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -46,6 +46,14 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(blurTapped:)];
     [self.blurredImageView addGestureRecognizer:tap];
     self.blurredImageView.userInteractionEnabled = YES;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        _contentSideOffset = 30.0;
+        _quoteFontSize = 18.0;
+    } else {
+        _contentSideOffset = 10.0;
+        _quoteFontSize = 14.0;
+    }
 }
 
 - (IBAction)btnFWDPressed:(UIButton *)sender {
@@ -226,16 +234,16 @@
     }
     
     if (quote.contentAlignment == FNItemContentAlignmentLeft) {
-        self.contentView.x = CONTENT_SIDE_OFFSET;
+        self.contentView.x = _contentSideOffset;
         self.contentView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin;
         self.quoteTextView.textAlignment = NSTextAlignmentLeft;
     } else {
-        self.contentView.x = self.width - self.contentView.width - CONTENT_SIDE_OFFSET;
+        self.contentView.x = self.width - self.contentView.width - _contentSideOffset;
         self.contentView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
         self.quoteTextView.textAlignment = NSTextAlignmentRight;
     }
     
-    self.quoteTextView.font = [UIFont fontWithName:@"HelveticaNeue" size:18.0];
+    self.quoteTextView.font = [UIFont fontWithName:@"HelveticaNeue" size:_quoteFontSize];
     
     NSArray *nameWords = [quote.celebrityName componentsSeparatedByString:@" "];
     if (nameWords.count > 0) {
@@ -244,6 +252,13 @@
         
         CGSize btnSize = [self.btnFWD sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
         self.btnFWD.width = btnSize.width + 40.0;
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+            //On the iphone we center the btn
+            self.btnFWD.center = CGPointMake(CGRectGetMidX(self.btnFWD.superview.bounds), self.btnFWD.center.y);
+            self.numOfFowardsLabel.x = 10.0;
+            self.numOfFowardsLabel.width = self.width - 20.0;
+        }
         
         NSString *numString = [NSString stringWithFormat:@"%d", quote.numOfForwards];
         NSString *fullNumOfForwardsText = [NSString stringWithFormat:@"%@ people have forwarded with %@", numString, nameWords[0]];

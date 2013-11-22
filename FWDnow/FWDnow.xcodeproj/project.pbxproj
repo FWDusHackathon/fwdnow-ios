@@ -28,6 +28,8 @@
 		C82F08D7183E89960055948C /* Aloe.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C82F08D6183E89960055948C /* Aloe.mp4 */; };
 		C82F08D9183E96890055948C /* Ashton@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C82F08D8183E96890055948C /* Ashton@2x.jpg */; };
 		C82F08DB183ECB1D0055948C /* Taboo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C82F08DA183ECB1D0055948C /* Taboo.mp4 */; };
+		C82F08DD183ED06E0055948C /* FNHeader~iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82F08DC183ED06E0055948C /* FNHeader~iPhone.xib */; };
+		C82F08DF183ED2970055948C /* FNQuoteCell~iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82F08DE183ED2970055948C /* FNQuoteCell~iPhone.xib */; };
 		C8B680A4183E164F007CDF88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A3183E164F007CDF88 /* Foundation.framework */; };
 		C8B680A6183E164F007CDF88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A5183E164F007CDF88 /* CoreGraphics.framework */; };
 		C8B680A8183E164F007CDF88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B680A7183E164F007CDF88 /* UIKit.framework */; };
@@ -99,6 +101,8 @@
 		C82F08D6183E89960055948C /* Aloe.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aloe.mp4; sourceTree = "<group>"; };
 		C82F08D8183E96890055948C /* Ashton@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ashton@2x.jpg"; sourceTree = "<group>"; };
 		C82F08DA183ECB1D0055948C /* Taboo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Taboo.mp4; sourceTree = "<group>"; };
+		C82F08DC183ED06E0055948C /* FNHeader~iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "FNHeader~iPhone.xib"; sourceTree = "<group>"; };
+		C82F08DE183ED2970055948C /* FNQuoteCell~iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "FNQuoteCell~iPhone.xib"; sourceTree = "<group>"; };
 		C8B680A0183E164F007CDF88 /* FWDnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWDnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B680A3183E164F007CDF88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8B680A5183E164F007CDF88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -301,7 +305,9 @@
 				C8B680EB183E1A4B007CDF88 /* FNQuoteCell.h */,
 				C8B680EC183E1A4B007CDF88 /* FNQuoteCell.m */,
 				C8B680EE183E1ABF007CDF88 /* FNQuoteCell.xib */,
+				C82F08DE183ED2970055948C /* FNQuoteCell~iPhone.xib */,
 				C8B68104183E245B007CDF88 /* FNHeader.xib */,
+				C82F08DC183ED06E0055948C /* FNHeader~iPhone.xib */,
 			);
 			name = "Cell views";
 			sourceTree = "<group>";
@@ -443,6 +449,7 @@
 				C8B680BF183E164F007CDF88 /* Images.xcassets in Resources */,
 				C82F08BF183E51090055948C /* btnTwitter@2x.png in Resources */,
 				C82F08C3183E553C0055948C /* btnCongressmanSelected@2x.png in Resources */,
+				C82F08DD183ED06E0055948C /* FNHeader~iPhone.xib in Resources */,
 				C82F08C5183E553C0055948C /* btnTwitterSelected@2x.png in Resources */,
 				C82F08B9183E50E30055948C /* iconFWDLight@2x.png in Resources */,
 				C82F08BD183E51090055948C /* btnCongressman@2x.png in Resources */,
@@ -451,6 +458,7 @@
 				C8B68113183E44CC007CDF88 /* iconFWD@2x.png in Resources */,
 				C8B68107183E2491007CDF88 /* FWDnow@2x.png in Resources */,
 				C82F08D7183E89960055948C /* Aloe.mp4 in Resources */,
+				C82F08DF183ED2970055948C /* FNQuoteCell~iPhone.xib in Resources */,
 				C82F08D3183E84340055948C /* Romo.mp4 in Resources */,
 				C82F08CA183E5CB10055948C /* FNCallView.xib in Resources */,
 				C82F08C4183E553C0055948C /* btnFBSelected@2x.png in Resources */,
